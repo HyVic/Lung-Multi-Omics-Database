@@ -1,8 +1,9 @@
 interface SecTitleProps {
   children: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
-export default function SecTitle({ children }: SecTitleProps) {
+export default function SecTitle({ children, style }: SecTitleProps) {
   return (
     <div
       style={{
@@ -11,6 +12,7 @@ export default function SecTitle({ children }: SecTitleProps) {
         color: "#6B7280",
         letterSpacing: "0.07em",
         marginBottom: 12,
+        ...style,
       }}
     >
       {children}

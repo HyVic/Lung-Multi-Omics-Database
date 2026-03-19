@@ -41,6 +41,7 @@ export interface Dataset {
   source: string;
   accession: string;
   status: "published" | "review" | "draft";
+  accessLevel: "Open" | "Controlled";
   uploader: string;
   uploadDate: string;
   files: DatasetFile[];
@@ -64,6 +65,7 @@ export const INIT_DS: Dataset[] = [
     source: "GEO",
     accession: "GSE198980",
     status: "published",
+    accessLevel: "Open",
     uploader: "Dr. Li Wei",
     uploadDate: "2025-08-14",
     files: [
@@ -173,6 +175,7 @@ export const INIT_DS: Dataset[] = [
     source: "GEO",
     accession: "GSE198981",
     status: "published",
+    accessLevel: "Open",
     uploader: "Dr. Li Wei",
     uploadDate: "2025-08-14",
     files: [

@@ -411,7 +411,7 @@ export default function DataSetsDetail() {
                         }}
                       >
                         <div
-                          style={{ fontSize: 22, fontWeight: 800, color: c as string }}
+                          style={{ fontSize: 22, fontWeight: 800, color: c }}
                         >
                           {n}
                         </div>

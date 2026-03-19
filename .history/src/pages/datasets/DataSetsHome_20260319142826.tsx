@@ -291,7 +291,7 @@ export default function DataSetsHome() {
           allowClear
           options={Object.entries(ONT.omics).map(([key, val]) => ({
             value: key,
-            label: val.cat,
+            label: val.label,
           }))}
         />
       </div>
@@ -625,7 +625,7 @@ export default function DataSetsHome() {
               style={{ background: omicsFilter.includes(key) ? val.color : undefined, color: omicsFilter.includes(key) ? "#fff" : undefined }}
               onClick={() => setOmicsFilter(omicsFilter.includes(key) ? omicsFilter.filter(o => o !== key) : [...omicsFilter, key])}
             >
-              {val.cat}
+              {val.label}
             </Button>
           ))}
         </div>
@@ -687,7 +687,7 @@ export default function DataSetsHome() {
                 </div>
               </div>
               <div style={{ display: "flex", gap: 8, marginLeft: 16 }}>
-                {[[ds.samples_meta.length, "Samples", "#3B82F6"], [ds.degs.length, "DEGs", "#EF4444"], [ds.files?.length || 0, "Files", "#8B5CF6"]].map(([v, l]) => (
+                {[[ds.samples_meta.length, "Samples", "#3B82F6"], [ds.degs.length, "DEGs", "#EF4444"], [ds.files?.length || 0, "Files", "#8B5CF6"]].map(([v, l, c]) => (
                   <div key={l} style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 8, padding: "8px 12px", textAlign: "center", minWidth: 52 }}>
                     <div style={{ fontSize: 16, fontWeight: 700, color: "#9CA3AF" }}>{v}</div>
                     <div style={{ fontSize: 10, color: "#9CA3AF", marginTop: 1 }}>{l}</div>

@@ -411,7 +411,7 @@ export default function DataSetsDetail() {
                         }}
                       >
                         <div
-                          style={{ fontSize: 22, fontWeight: 800, color: c as string }}
+                          style={{ fontSize: 22, fontWeight: 800, color: c }}
                         >
                           {n}
                         </div>
@@ -561,7 +561,7 @@ export default function DataSetsDetail() {
                   key={l}
                   style={{ textAlign: "center", padding: "14px 10px" }}
                 >
-                  <div style={{ fontSize: 24, fontWeight: 800, color: "#6B7280" }}>
+                  <div style={{ fontSize: 24, fontWeight: 800, color: red }}>
                     {v}
                   </div>
                   <div style={{ fontSize: 11, color: "#6B7280", marginTop: 3 }}>
