@@ -46,7 +46,7 @@ export default function AuthModal ({ onClose, onLogin }: LoginProps){
       // if (!u) return setErr("Incorrect email or password.");
       // // 登录时使用 super 用户名来判断管理员权限
       // const userRole = u.role === "admin" ? "super" : u.role;
-      onLogin({ username: "super", role: 'super' });
+      onLogin({ username: "super", role: userRole });
       onClose();
     } catch (e) {
       setBusy(false);
